@@ -1,0 +1,211 @@
+/**************************/
+/*     General Styles     */
+/**************************/
+body,
+html {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+
+body {
+  background-image: linear-gradient(
+      110deg,
+      #14181f 25%,
+      rgba(11, 12, 16, 0.8) 50%,
+      #0a0c10 70%
+    ),
+    url("../images/dis1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  color: white;
+}
+
+body,
+p {
+  color: #6b747b;
+  font: 400 1rem/1.625rem "Cardo", serif;
+}
+
+a {
+  color: #6b747b;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #6b747b;
+  text-decoration: underline;
+}
+
+/**********************/
+/*     Navigation     */
+/**********************/
+.navbar {
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+  background-color: transparent;
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 0.875rem;
+  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.025);
+  outline: none;
+}
+
+.navbar .navbar-brand {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.navbar .logo-image img {
+  width: 200px;
+  height: 30px;
+  opacity: 0.9;
+}
+
+
+.offcanvas-collapse {
+  position: fixed;
+  top: 3.25rem; /* adjusts the height between the top of the page and the offcanvas menu */
+  bottom: 0;
+  left: 100%;
+  width: 50%;
+  height: 30%;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  overflow: hidden;
+  visibility: hidden;
+  /* background-color: #3b363c; */
+  border-radius: 4px;
+  transition: visibility 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, visibility 0.3s ease-in-out,
+    -webkit-transform 0.3s ease-in-out;
+  text-align: right;
+}
+
+.offcanvas-collapse.open {
+  visibility: visible;
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
+.navbar .navbar-nav {
+  margin-top: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.navbar .nav-item .nav-link {
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+  color: #c4c2c2;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  margin-left: 40px;
+	font-size: 1rem;
+}
+
+.navbar .nav-item .nav-link:hover,
+.navbar .nav-item .nav-link.active {
+  color: #ffffff;
+}
+
+.navbar .navbar-toggler {
+  padding: 0;
+  border: none;
+  outline: none;
+}
+
+/*************************/
+/*     Media Queries     */
+/*************************/
+
+/* Min-width 992px */
+@media (min-width: 992px) {
+
+  /* Navigation */
+  .navbar {
+    padding-top: 1.75rem;
+    background-color: transparent;
+    box-shadow: none;
+    transition: all 0.2s;
+  }
+
+  .navbar.top-nav-collapse {
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
+    background-color: #3b363c;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.025);
+  }
+
+  .offcanvas-collapse {
+    position: static;
+    top: auto;
+    bottom: auto;
+    left: auto;
+    width: auto;
+    padding-right: 0;
+    padding-left: 0;
+    background-color: transparent;
+    overflow-y: visible;
+    visibility: visible;
+  }
+
+  .offcanvas-collapse.open {
+    -webkit-transform: none;
+    transform: none;
+  }
+
+  .navbar .navbar-nav {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .navbar .nav-item .nav-link {
+    padding-right: 0.625rem;
+    padding-left: 0.625rem;
+    color: white;
+  }
+
+  .navbar .nav-item .nav-link:hover,
+  .navbar .nav-item .nav-link.active {
+    color: #b4b4b4;
+  }
+
+  .navbar.top-nav-collapse .nav-item .nav-link {
+    color: #c4c2c2;
+  }
+
+  .navbar.top-nav-collapse .nav-item .nav-link:hover,
+  .navbar.top-nav-collapse .nav-item .nav-link.active {
+    color: #ffffff;
+  }
+
+  /* end of navigation */
+
+}
+/* end of min-width 992px */
+
+/* Min-width 1200px */
+@media (min-width: 1200px) {
+
+  /* Navigation */
+  .navbar .container {
+    max-width: 100%;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
+
+  /* end of navigation */
+
+  .navbar .navbar-toggler {
+    padding: 0;
+    border: none;
+    font-size: 1.25rem;
+    outline: none;
+    margin-left: 200px;
+  }
+}
+/* end of min-width 1200px */
